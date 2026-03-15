@@ -54,7 +54,7 @@ export const translations = {
 } as const;
 
 export type Language = "es" | "en";
-export type Translations = typeof translations.es;
+export type Translations = (typeof translations)["es"] | (typeof translations)["en"];
 
 export const providers = [
   { category: "Planeación y coordinación", name: "Laura Maiguel Events", url: "https://www.instagram.com/lauramaiguelevents" },
