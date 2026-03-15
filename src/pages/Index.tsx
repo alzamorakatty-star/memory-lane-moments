@@ -14,7 +14,7 @@ export default function Index() {
     <div className="min-h-screen bg-background">
       <LanguageToggle isSpanish={isSpanish} onToggle={() => setIsSpanish(!isSpanish)} />
       
-      <HeroSection title={t.title} subtitle={t.subtitle} />
+      <HeroSection t={t} />
       
       <div className="w-12 h-px bg-border mx-auto" />
       
@@ -26,8 +26,7 @@ export default function Index() {
       
       {/* Footer */}
       <footer className="py-16 text-center">
-        <p className="font-display text-lg font-medium text-foreground">{t.withLove}</p>
-        <p className="font-display text-2xl font-medium text-foreground mt-1">{t.signatures}</p>
+        <p className="font-display text-2xl font-medium text-foreground">{t.footerSignature}</p>
       </footer>
     </div>
   );
